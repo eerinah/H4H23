@@ -8,7 +8,7 @@ public class ChoiceLogic : MonoBehaviour
         gameObject.SetActive(false);
     }
     public void AutismSymptomChoice(){
-        GlobalVars.autismScore++;
+        GlobalVars.autismScore += 1;
         EndDialogue();
     }
 
