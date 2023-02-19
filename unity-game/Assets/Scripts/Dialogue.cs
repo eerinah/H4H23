@@ -10,31 +10,28 @@ public class Dialogue : MonoBehaviour
     public float textSpeed;
 
     private int index;
+    private int autismScore;
     // Start is called before the first frame update
     void Start()
     {
         textComponent.text = string.Empty;
+        
         StartDialogue();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetKeyDown("space"))
         {
             if(textComponent.text == lines[index])
             {
                 NextLine();
             }
-            else
-            {
-                StopAllCoroutines();
-                textComponent.text = lines[index];
-            }
         }
     }
 
-    void StartDialogue()
+    public void StartDialogue()
     {
         index = 0;
         StartCoroutine(TypeLine());
@@ -49,15 +46,12 @@ public class Dialogue : MonoBehaviour
         }
     }
 
-    void NextLine(){
+    public void NextLine(){
         if (index < lines.Length - 1)
         {
             index++;
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
-        }
-        else{
-            gameObject.SetActive(false);
         }
     }
 }
