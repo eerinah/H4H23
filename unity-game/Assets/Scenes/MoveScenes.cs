@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class MoveScenes : MonoBehaviour
 {
   public void MoveToScene (int sceneID){
-    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-    //.LoadScene(sceneID);
+    //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    SceneManager.LoadScene(sceneID);
     Debug.Log("MoveScenes");
   }
     // Start is called before the first frame update
