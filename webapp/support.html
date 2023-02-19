@@ -14,7 +14,7 @@
             </a>
             <div id="optionBar">
                 <a href="index.html">Learn More</a>
-                <a href="quizzes.html">Quizzes</a>
+                <a href="index.html">Quizzes</a>
                 <a href="support.html">Support</a>
             </div>
         </nav>
@@ -62,20 +62,68 @@
                         <div class="sTimeButton">monthly</div>
                         <div class="sTimeButton">yearly</div>
                     </div>
-                    <div class="sPaymentOption">
+                    <div type="radio" class="sPaymentOption">
                         <text>$15</text>
                         <div class="sTimeButton">monthly</div>
                         <div class="sTimeButton">yearly</div>
                     </div>
-                    <div class="sPaymentOption">
+                    <div type="radio" class="sPaymentOption">
                         <text>$25</text>
                         <div class="sTimeButton">monthly</div>
                         <div class="sTimeButton">yearly</div>
                     </div>
                     <input id="sEmailBox" placeholder="Enter email here" type="text"/>
-                    <button>Checkout</button>
+                    <button id="submitEmail">Checkout</button>
                 </div>
             </div>
         </main>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+            const firebaseConfig = {
+                apiKey: "AIzaSyAUYBmtFu3lfE0xe5QSAYQ3pLLajSpwXmE",
+                authDomain: "h4h2023email.firebaseapp.com",
+                databaseURL: "https://h4h2023email-default-rtdb.firebaseio.com",
+                projectId: "h4h2023email",
+                storageBucket: "h4h2023email.appspot.com",
+                messagingSenderId: "324823026364",
+                appId: "1:324823026364:web:d0bdf3cf21456799a71eb9",
+                measurementId: "G-KW5QH65S5H"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            import {
+            getDatabase,
+            ref,
+            set,
+            child,
+            get,
+            }   from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+
+            const database = getDatabase();
+
+            const email = document.getElementById('sEmailBox');
+            const submit = document.getElementById('submitEmail');
+
+            function register() {
+                const dbRef = ref(database);
+
+                get(child(dbRef, "Users/" + email.value)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    alert("User already exists!");
+                } else {
+                    set(ref(database, "Users/" + email.value), {
+                    email: email.value,
+                    })
+                .then(() => {
+                    alert("User was successfully added!");
+                })
+                .catch((error) => {
+                    alert("Error: " + error);
+                });
+                }
+                });
+            }
+            submit.addEventListener("click", register);
+          </script>
     </body>
 </html>

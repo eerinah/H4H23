@@ -278,3 +278,8 @@ article img{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+#submitEmail:focus{
+    background-color: #546A5B;
+    border: 3px solid #FFF6EA;
+}
