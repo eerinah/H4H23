@@ -55,15 +55,18 @@ body{
   font-weight: 300;
   text-align: center;
   background-color: #fff6ea;
+  font-family: 'Poppins', sans-serif;
 }
 h1{
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   margin: 0px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 2.5rem;
   background-color: #546a5b;
   color: #fff;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .question{
   font-size: 30px;
@@ -80,18 +83,21 @@ h1{
 }
 button{
   font-family: 'Poppins', sans-serif;
-	font-size: 22px;
-	background-color: #afccaa;
+	font-size: 18px;
+	background-color: #546A5B;
 	color: #fff;
 	border: 0px;
-	border-radius: 3px;
-	padding: 20px;
+	border-radius: 12px;
+	padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 	cursor: pointer;
 	margin-bottom: 20px;
   margin-top: 30px;
 }
 button:hover{
-	background-color: #c57d0e;
+	background-color: #AFCCAA;
 }
 
 .block{
@@ -100,6 +106,8 @@ button:hover{
   border-style: outset;
   box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.25);
   margin: 20px;
+  margin-left: 15vw;
+  margin-right: 15vw;
 }
 
 .slide{
@@ -117,7 +125,7 @@ button:hover{
 }
 .quiz-container{
   position: relative;
-  height: 200px;
+  height: 250px;
   margin-top: 40px;
 }
 
