@@ -87,12 +87,12 @@ header img{
 
 .landingButton{
     box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 12px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,12 +111,32 @@ header img{
     margin-right: 1vw;
 }
 
+#forGirlsButton a{
+    text-decoration: none;
+    color: #FFF6EA;
+}
+
+#forGirlsButton a:hover{
+    text-decoration: none;
+    color: #546A5B;
+}
+
 #forWomenButton{
     color: #546A5B;
 }
 
 #forWomenButton:hover{
     background-color: #546A5B;
+    color: #FFF6EA;
+}
+
+#forWomenButton a{
+    text-decoration: none;
+    color: #546A5B;
+}
+
+#forWomenButton a:hover{
+    text-decoration: none;
     color: #FFF6EA;
 }
 
@@ -169,3 +189,79 @@ main h1{
     font-size: 1.25rem;
     margin-right: 10px;
 }
+
+/*RESOURCE SECTION*/
+
+section{
+    background-color: #FFF6EA;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+section h1{
+    font-family: 'Playfair Display', serif;
+    color:#546A5B;
+    font-size: 3rem;
+}
+
+#resourceContent{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+
+.resourceBox{
+    box-sizing: border-box;
+    border-radius: 12px;
+    border: solid 5px #C57D0E;
+    width: 41vw;
+    height:600px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.resourceBox h2{
+    font-size: 2.5rem;
+    color: #AFCCAA;
+}
+
+.resourceBox p{
+    color:#546A5B;
+    font-size: 1.1rem;
+}
+
+.resourceBox .resourceButton{
+    box-sizing: border-box;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px #546A5B;
+    background-color: #546A5B;
+    color: #FFF6EA;
+    width: 150px;
+}
+
+.resourceButton:hover{
+    background-color: #FFF6EA;
+    color: #546A5B;
+}
+
+.resourceButton a{
+    text-decoration: none;
+    color:#FFF6EA;
+}
+
+.resourceButton a:hover{
+    color: #546A5B;
+}
+
