@@ -53,5 +53,16 @@ public class Dialogue : MonoBehaviour
             textComponent.text = string.Empty;
             StartCoroutine(TypeLine());
         }
+        else if (index == lines.Length - 1){
+            ChoiceLogic[] buttons= FindObjectsOfType<ChoiceLogic>(true);
+            buttons[0].Activate();
+            buttons[1].Activate();
+        }
+        
     }
+    public void EndDialogue(){
+        StopAllCoroutines();
+        gameObject.SetActive(false);
+    }
+
 }
