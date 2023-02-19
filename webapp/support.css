@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+/* font-family: 'Playfair Display', serif; */
+
+
+body{
+    background-color: #FFF6EA;
+    font-family: 'Poppins', sans-serif;
+    margin: auto;
+}
+
+/* NAV BAR */
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    margin-bottom: 2vh;
+    color: #AFCCAA;
+    margin-top: 3vh;
+}
+
+nav a, nav #optionBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav #optionBar a{
+    margin-left: 3vw;
+    text-decoration: none;
+    color: #AFCCAA;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav a text{
+    text-decoration: none;
+    color:#AFCCAA;
+    margin-left: 1vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav a text:hover, #optionBar a:hover{
+    color:#546A5B;
+    font-weight: bold;
+}
+
+/*HEADER*/
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.sHeaderLine{
+    height: 8px;
+    width: 40vw;
+    background-color: #AFCCAA;
+}
+
+
+header h1{
+    font-size: 4.3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    color: #C57D0E;
+}
+
+#sHeaderRow1{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+}
+
+#sHeaderRow1 h1{
+    margin-right: 50px;
+}
+
+#sHeaderRow2{
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+#sHeaderRow2 h1{
+    margin-left: 50px;
+}
+
+/* STATS SECTION */
+section{
+    height: 400px;
+    width: 100vw;
+    background-color: #AFCCAA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section > img{
+    width: 270px;
+}
+
+.sDataItem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: #FFF6EA;
+}
+
+.sDataItem > img{
+    width: 130px;
+}
+
+.sDataItem > span{
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.sDataItem > p{
+    margin-top: 0px;
+}
+
+/* MAIN SECTION */
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+article{
+    width: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article h2{
+    font-size: 3rem;
+    color:#546A5B;
+    align-self: flex-start;
+}
+
+article p{
+    font-size: 1.2rem;
+}
+
+article img{
+    margin-top: 75px;
+    width: 20vw;
+}
+
+
+/*DONATION BOX*/
+
+#donationBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    background-color: #546A5B;
+    border-radius: 12px;
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.25); /*not working*/
+    width: 35vw;
+    height: 850px;
+    padding: 30px;
+}
+
+#donationBox h2{
+    color:#FFF6EA;
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+}
+
+#donationBox h4{
+    color:#FFF6EA;
+    font-size: 1.5rem;
+    margin-top: 0px;
+}
+
+#sInputOptions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.sPaymentOption{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 31vw;
+    height: 100px;
+    background-color: #FFF6EA;
+    border-radius: 12px;
+    margin-top: 40px;
+    color: #546A5B;
+    border: solid 3px #FFF6EA;
+}
+
+.sPaymentOption text{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.sPaymentOption .sTimeButton{
+    background-color: #546A5B;
+    border: solid 3px #546A5B;
+    color: #FFF6EA;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+}
+
+.sPaymentOption:hover{
+    background-color: #546A5B;
+    border: solid 3px #FFF6EA;
+    color:#FFF6EA;
+}
+
+.sPaymentOption:hover .sTimeButton{
+    background-color: #FFF6EA;
+    border: solid 3px #546A5B;
+    color:#546A5B;
+}
+
+#sInputOptions input{
+    margin-top: 40px;
+    width: 20vw;
+}
+
+#sInputOptions input[type="text"]{
+    height: 30px;
+    width: 250px;
+    border: none;
+    outline: none;
+    background-color: #546A5B;
+    border-bottom: solid 3px #FFF6EA;
+    cursor: text;
+    color: #FFF6EA;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#sInputOptions input[type="text"]::placeholder{
+    color:#FFF6EA;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+#sInputOptions button{
+    margin-top: 40px;
+    background-color: #AFCCAA;
+    color:#FFF6EA;
+    font-size: 1.1rem;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#submitEmail:focus{
+    background-color: #546A5B;
+    border: 3px solid #FFF6EA;
+}

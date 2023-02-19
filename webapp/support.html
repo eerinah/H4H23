@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="support.js" async defer></script>
+        <link href="support.css" rel="stylesheet">
+        <link rel="icon" href="./indexPhotos/logo.jpeg">
+        <title>Support Specks</title>
+    </head>
+    <body>
+        <nav>
+            <a href="index.html" id="logoMain">
+                <img src="./indexPhotos/logo.jpeg" width="81px">
+                <text>Speks</text>
+            </a>
+            <div id="optionBar">
+                <a href="index.html">Learn More</a>
+                <a href="adultQuiz.html">Quizzes</a>
+                <a href="support.html">Support</a>
+            </div>
+        </nav>
+        <header>
+            <div id="sHeaderRow1">
+                <h1>Support Research</h1>
+                <div class="sHeaderLine"></div>
+            </div>
+            <div id="sHeaderRow2">
+                <div class="sHeaderLine"></div>
+                <h1>to Break the Stigma.</h1>
+            </div>
+        </header>
+        <section>
+            <img src="./supportPhotos/greenGirl.jpeg">
+            <div id="sDonations" class="sDataItem">
+                <span class="countUp">385</span>
+                <p>donations</p>
+                <img src="./supportPhotos/huggingHeart.jpeg">
+            </div>
+            <div id="sStudies" class="sDataItem">
+                <span class="countUp">12</span>
+                <p>studies founded</p>
+                <img src="./supportPhotos/book.jpeg">
+            </div>
+            <div id="sDollars" class="sDataItem">
+                <span class="countUp">3987</span>
+                <p>dollars raised</p>
+                <img src="./supportPhotos/moneyHand.jpeg">
+            </div>
+        </section>
+        <main>
+            <article>
+                <h2>What your donations do...</h2>
+                <p>One of the biggest issues contributing to the stigma around women’s autism awareness is the mere lack of research surrounding the topic. Studies leading up to today are composed of results from white males,  so they are not able to fully articulate the proper symptoms associated with women.</p>
+                <p>Your donations will directly go towards supporting case studies done specifically about autism in women. Not only will this improve the accuracy of diagnoses, it will also combat the stigmas surrounding autism by raising awareness about this issue affecting thousands of women.</p>
+                <img src="./supportPhotos/hiFiveImage.jpeg">
+            </article>
+            <div id="donationBox">
+                <h2>Donate Now</h2>
+                <h4>Choose a donation amount:</h4>
+                <div id="sInputOptions">
+                    <div class="sPaymentOption">
+                        <text>$10</text>
+                        <div class="sTimeButton">monthly</div>
+                        <div class="sTimeButton">yearly</div>
+                    </div>
+                    <div type="radio" class="sPaymentOption">
+                        <text>$15</text>
+                        <div class="sTimeButton">monthly</div>
+                        <div class="sTimeButton">yearly</div>
+                    </div>
+                    <div type="radio" class="sPaymentOption">
+                        <text>$25</text>
+                        <div class="sTimeButton">monthly</div>
+                        <div class="sTimeButton">yearly</div>
+                    </div>
+                    <input id="sEmailBox" placeholder="Enter email here" type="text"/>
+                    <button id="submitEmail">Checkout</button>
+                </div>
+            </div>
+        </main>
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
+            const firebaseConfig = {
+                apiKey: "AIzaSyAUYBmtFu3lfE0xe5QSAYQ3pLLajSpwXmE",
+                authDomain: "h4h2023email.firebaseapp.com",
+                databaseURL: "https://h4h2023email-default-rtdb.firebaseio.com",
+                projectId: "h4h2023email",
+                storageBucket: "h4h2023email.appspot.com",
+                messagingSenderId: "324823026364",
+                appId: "1:324823026364:web:d0bdf3cf21456799a71eb9",
+                measurementId: "G-KW5QH65S5H"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            import {
+            getDatabase,
+            ref,
+            set,
+            child,
+            get,
+            }   from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
+
+            const database = getDatabase();
+
+            const email = document.getElementById('sEmailBox');
+            const submit = document.getElementById('submitEmail');
+
+            function register() {
+                const dbRef = ref(database);
+
+                get(child(dbRef, "Users/" + email.value)).then((snapshot) => {
+                if (snapshot.exists()) {
+                    alert("User already exists!");
+                } else {
+                    set(ref(database, "Users/" + email.value), {
+                    email: email.value,
+                    })
+                .then(() => {
+                    alert("User was successfully added!");
+                })
+                .catch((error) => {
+                    alert("Error: " + error);
+                });
+                }
+                });
+            }
+            submit.addEventListener("click", register);
+          </script>
+    </body>
+</html>
