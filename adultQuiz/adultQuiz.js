@@ -16,10 +16,11 @@
 
           // ...add an HTML radio button
           answers.push(
-            `<label>
-              <input type="radio" name="question${questionNumber}" value="${letter}">
-              ${letter} :
+            `<label >
+             
+            <input type="radio" name="question${questionNumber}" value="${letter}">
               ${currentQuestion.answers[letter]}
+  
             </label>`
           );
         }
@@ -54,12 +55,14 @@
       const selector = `input[name=question${questionNumber}]:checked`;
       const userAnswer = (answerContainer.querySelector(selector) || {}).value;
 
+      
+
     if(userAnswer==='b'){
         numTracker+=1;
     }
     else if (userAnswer==='c'){
         numTracker+=2;
-    }
+    };
 
      /* // if answer is correct
       if(userAnswer === currentQuestion.correctAnswer){
@@ -89,11 +92,9 @@
       }
 
       moreContainer.innerHTML= ' <div style="border: solid; padding:30px; margin:30px;"> <br> <strong>What should I do now?</strong> <p>Please remember that this test only indicates the common signs of autism based on your experiences. Your result is not a clinical diagnosis and does not necessarily mean you are autistic. However, people who report scores like yours often benefit from an autism assessment. </p> </div>';
-
+// show number of correct answers out of total
     });
 
-    // show number of correct answers out of total
-    
   }
 
   function showSlide(n) {
@@ -131,7 +132,8 @@
   const submitButton = document.getElementById('submit');
   const myQuestions = [
     {
-      question: "1. Is your sense of humor fairly conventional?",
+      question: "1. Is your sense of humor fairly unconventional?",
+
       answers: {
         a: "No/Never",
         b: "A little/Sometimes",
@@ -149,7 +151,7 @@
         c: "Yes/Often",
         d: "I don't know",
       },
-      correctAnswer: "c"
+
     },
     {
       question: "3. Do you tend to shut down or have a meltdown when stressed or overwhelmed?",
@@ -159,7 +161,7 @@
         c: "Yes/Often",
         d: "I don't know",
       },
-      correctAnswer: "d"
+      
     },
     {
         question: "4. Do you have extra sensitive hearing?",
@@ -169,7 +171,7 @@
         c: "Yes/Often",
         d: "I don't know",
         },
-        correctAnswer: "c"
+       
     },
     {
         question: "5. As a teenager, were you usually unaware of social rules & boundaries unless they were clearly spelled out?",
@@ -179,7 +181,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "6. Do others often misunderstand you?",
@@ -189,7 +191,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+       
       },
       {
         question: "7. Do you have difficulty accepting criticism, correction, and direction?",
@@ -199,7 +201,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "8. Have people you formed strong attachments to taken advantage of you?",
@@ -209,7 +211,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "9. Are you easily distracted?",
@@ -219,7 +221,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+       
       },
       {
         question: "10. Do people sometimes think you are smiling at the wrong occasion?",
@@ -229,7 +231,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
 
       {
@@ -240,7 +242,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "12. Is your sense of humor different from mainstream or considered odd?",
@@ -251,7 +253,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "13. Do you tend to get so absorbed by your special interests that you forget or ignore everything else?",
@@ -261,7 +263,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "14. Do you get confused by several verbal instructions at the same time?",
@@ -271,7 +273,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "15. Do you prefer to keep to yourself?",
@@ -281,7 +283,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "16. Is it hard for you to see why some things upset people so much?",
@@ -291,7 +293,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "17. Before doing something or going somewhere, do you need to have a picture in your mind of what's going to happen so as to be able to prepare yourself mentally first?",
@@ -301,7 +303,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "18. Do you have certain routines which you need to follow?",
@@ -311,7 +313,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "19. Would you quickly become impatient and irritated if you could not find a solution to a problem?",
@@ -321,7 +323,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "20. Has it been harder for you than for others to keep friends?",
@@ -331,7 +333,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "21. Do you bite your lip, cheek or tongue (e.g. when thinking, when anxious or nervous)?",
@@ -341,17 +343,17 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+       
       },
       {
-        question: "22. Do you find it easy to describe your feelings?",
+        question: "22. Do you find it hard to describe your feelings?",
         answers: {
             a: "No/Never",
             b: "A little/Sometimes",
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "23. Have you experienced stronger than normal attachments to certain people?",
@@ -361,7 +363,7 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
         question: "24. Do you have problems with timing in conversations?",
@@ -371,19 +373,20 @@
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       },
       {
-        question: "25. Are you good at interpreting facial expressions?",
+        question: "25. Are you bad at interpreting facial expressions?",
         answers: {
             a: "No/Never",
             b: "A little/Sometimes",
             c: "Yes/Often",
             d: "I don't know",
         },
-        correctAnswer: "c"
+        
       }
   ];
+
 
 
   // Kick things off
@@ -393,6 +396,7 @@
   // Pagination
   const previousButton = document.getElementById("previous");
   const nextButton = document.getElementById("next");
+
   const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
